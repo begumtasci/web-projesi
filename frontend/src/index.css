@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-900: #0b1220;
+  --bg-800: #0f192b;
+  --panel: #0f172a;
+  --border: #1f2a3d;
+  --muted: #94a3b8;
+  --text: #e2e8f0;
+  --accent: #0ea5e9;
+  --accent-strong: #0284c7;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, #122038, #0a1220 55%),
+    radial-gradient(circle at 80% 0%, #0d1f33, #0a1220 45%),
+    var(--bg-900);
+  color: var(--text);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.card {
+  background: linear-gradient(145deg, #0f192b, #0c1525);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.auth-card {
+  @apply max-w-lg mx-auto w-full;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-semibold transition;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  color: #e7f5ff;
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.25);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #132137;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.nav-bar {
+  background: rgba(10, 18, 32, 0.9);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  color: var(--muted);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--text);
+}
+
+.page-shell {
+  min-height: 100vh;
+}
+
+.form-label {
+  color: #cbd5e1;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.form-input input {
+  background: #0f182a !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+.form-input input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.25) !important;
+}
+
+.muted {
+  color: var(--muted);
+}
